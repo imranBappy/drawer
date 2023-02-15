@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.container {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  flex-basis: 200px;
+  padding: 20px 20px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar .name {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  margin-bottom: 20px;
+  padding: 10px 2px;
+  border-bottom: 1px solid #ccc;
+}
+.full__body {
+  width: 100%;
+}
+.full__body header {
+  border: 1px solid #ccc;
+  box-shadow: 0px 12px 7px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.full__body .header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+.controller {
+  padding: 10px;
+}
+
+section {
+  max-width: 1100px;
+  min-width: none;
+  margin: 20px auto;
+}
+
+@media only screen and (max-width: 1310px) {
+  section {
+    margin: 20px 15px;
+  }
+}
+.controller {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .controller {
+    display: block;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+  }
+  .sidebar {
+    width: 200px;
+    position: absolute;
+    padding: 20px 20px;
+    border-right: 1px solid #ccc;
+    left: -200px;
+  }
+}
+
+.sidebar__toggle {
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  padding: 20px 20px;
+  border-right: none;
+  left: 0px;
+  background-color: white;
+  box-shadow: 0px 12px 7px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
